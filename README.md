@@ -22,15 +22,33 @@
   
 # Example
 Build a program that prompts the user for their name and then adds it to the webpage 
-1. Define a function called ```startExample``` that prints "click" to the console
-2. Create a button with the text *Start Example* that calls the ```startExample()``` function when clicked and test that it works
-3. Use ```prompt``` to ask the user for their name and stores it in a variable called ```userName``
-4. Use ```console.log``` to print ```userName``` to the console and verify that it works
-5. Define a function called ```addName``` and takes a parameter called ```newName```
-6. Add code to the function to create a new h2 element, set its text ```newName``` and add the h2 to the page
+1. Define a function called ```start``` that prints "click" to the console
+2. Create a button with the text ***Take attendance*** that calls the ```start()``` function when clicked and test that it works
+3. Use ```document.createElement("h1")``` to create a new level 1 heading and store it in a variable named ```heading```
+4. Set the ```.innerText``` to *Attendance*
+5. Use ```document.body.appendChild(heading)``` to add the heading to the page
+6. Test that it works, check your console for errors
 
 # Exercise 1
-Modify the example to ask for the user's first name then last name, and then adds a new h2 to the page with their name shown as *Last, First*
-1. In the ```start``` function, add a second ``prompt``` to ask for their last name and store the result in a variable called ```userLastname```
+Create an ```addName``` function
+1. Continue the ```start``` function and use ```prompt``` to ask the user for their name and store it in a variable called ```userName```
+2. Use ```console.log``` to print ```userName``` to the console and verify that it works
+3. Define a function called ```addName``` and takes a parameter called ```newName```
+4. Add code to the function to create a new h2 element, set its text ```newName``` and add the h2 to the page
+5. Call the ```addName``` function from the ```start``` function and pass ```userName``` as the parameter
+6. Test that it works, check your console for errors
+
+# Exercise 2
+Modify the example to ask for the user's first name then last name, and then adds a new h2 to the page with their name shown as **Last, First**
+1. In the ```start``` function, add a second ```prompt``` to ask for their last name and store the result in a variable called ```userLastname```
 2. Modify the ```addName``` function to take a second parameter called ```lastname```
 3. Modify the line that sets the text of the h2 so that it will print out the users name in the format *Lastname, Firstname*
+4. Test that it works
+
+# Exercise 3
+Create an ```addSeparator``` function that adds an hr element (horizontal rule line) after a each name
+1. Define a function named ```addSeparator``` after your ```addName``` function
+2. In the function, use ```document.createElement("hr")``` to create the line and store in a variable (pick a good name for the variable)
+3. Use ```document.body.appendChild(yourVariable)``` to add the hr line to the page 
+4. Call the ```addSeparator``` function from the ```start``` function after you call ```addName```
+5. Test that it works
