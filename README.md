@@ -3,9 +3,15 @@
 # Learning Target
 - I am learning how to create elements using the DOM
 # Success Criteria
+- I can define and call functions that take parameters
 - I can use ```document.createElement(tag)``` to create elements
-- I can use ```.innerText``` to set the text content and ```.style.property``` to set the styles of the new element
 - I can use ```document.body.appendChild(element)``` to add an element to the page
+
+# Project Setup
+1. Install *Live Server*
+2. Create ```script.js```
+3. Add ```console.log("Script started")``` to begining of ```script.js```
+4. Add ```<script src="script.js"></script>``` before ```</body>``` tag in ```index.html``` to link the script
 
 # Essential Notes
 ## Steps to creating a new element with JavaScript
@@ -21,13 +27,14 @@
     - Use ```document.body.appendChild(myElement)```;
   
 # Example
-Build a program that prompts the user for their name and then adds it to the webpage 
+Build a program for taking attendance
 1. Define a function called ```start``` that prints "click" to the console
 2. Create a button with the text ***Take attendance*** that calls the ```start()``` function when clicked and test that it works
 3. Use ```document.createElement("h1")``` to create a new level 1 heading and store it in a variable named ```heading```
 4. Set the ```.innerText``` to *Attendance*
-5. Use ```document.body.appendChild(heading)``` to add the heading to the page
-6. Test that it works, check your console for errors
+5. Set some ```.style``` properties
+6. Use ```document.body.appendChild(heading)``` to add the heading to the page
+7. Test that it works, check your console for errors
 
 # Exercise 1
 Create an ```addName``` function
@@ -52,3 +59,4 @@ Create an ```addSeparator``` function that adds an hr element (horizontal rule l
 3. Use ```document.body.appendChild(yourVariable)``` to add the hr line to the page 
 4. Call the ```addSeparator``` function from the ```start``` function after you call ```addName```
 5. Test that it works
+6. Modify your script to take attendance for 5 people (your ```start``` function should have 5 prompts for names, 5 calls to ```addName```, and 5 calls to ```addSeparator```)
