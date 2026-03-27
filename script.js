@@ -19,12 +19,21 @@ function start() {
 
     //prompt for name 
     let userName = prompt("ENTER your name");
+    let userLastName = prompt("ENter your last name buddy");
+
+    addName(userName, userLastName);
+    addSeperator();
     
 }
 
-function addName(newName) {
+function addName(newName, lastName) {
     console.log("username");
-    let userName = newName;
-    
+    let dameDame = document.createElement("h2");
+    dameDame.innerText = newName + ","+ lastName;
+    document.body.appendChild(dameDame);
+}
 
+function addSeperator() {
+    let lineBreak = document.createElement("hr");
+    document.body.appendChild(lineBreak);
 }
